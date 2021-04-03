@@ -16,7 +16,7 @@
 			// TODO Auto-generated method stub
 			System.setProperty("webdriver.chrome.driver","C:\\browser_driver\\chromedriver.exe");
 			
-			String email = "rahat.tajwar1@gmail.com";
+			String email = "rahat.tajwar12@gmail.com";
 			
 			ChromeDriver driver = new ChromeDriver();
 			driver.get("http://automationpractice.com/index.php ");
