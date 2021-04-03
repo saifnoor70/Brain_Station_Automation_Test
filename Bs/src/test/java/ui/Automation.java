@@ -24,7 +24,7 @@ public class Automation {
 		WebElement signin = driver.findElementByXPath("//a[@class='login']");
 		signin.click();
 		
-	driver.findElementByXPath("//input[@name='email_create']").sendKeys("ieee.ieacon2021@gmail.com");
+	driver.findElementByXPath("//input[@name='email_create']").sendKeys("annajiat@gmail.com");
 		//give_email
        
 		driver.findElementByXPath("//button[@id=\'SubmitCreate\']").click();
@@ -95,7 +95,8 @@ public class Automation {
       mobile_phone.sendKeys("01571306571");
    
       WebElement alias_address =driver.findElementByXPath(" //input[@id='alias']");
-      alias_address.sendKeys("Mohakhali");
+      alias_address.clear(); 
+     alias_address.sendKeys("Mohakhali");
     
       WebElement submit_account =driver.findElementByXPath("//button[@id='submitAccount']");
       submit_account.click();
@@ -107,7 +108,18 @@ public class Automation {
 			e.printStackTrace();
 		}
       
-         
+      WebElement logout= driver.findElementByXPath("//a[@title='Log me out']");
+      logout.click();
+      
+      WebElement log_in_email =driver.findElementByXPath("//input[@id='email']");
+      log_in_email.sendKeys("annajiat@gmail.com");
+      
+      WebElement log_in_password =driver.findElementByXPath("//input[@id='passwd']");
+      log_in_password.sendKeys("12345");
+      
+      WebElement sign_in_button =driver.findElementByXPath("//button[@id='SubmitLogin']");
+      sign_in_button.click();
+      
       String customer_account_name = driver.findElementByXPath("//a[@title='View my customer account']").getText();
       
      if(customer_account_name.equals("SAIF NOOR")) {
