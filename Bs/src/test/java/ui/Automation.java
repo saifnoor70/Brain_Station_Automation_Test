@@ -16,18 +16,18 @@
 			// TODO Auto-generated method stub
 			System.setProperty("webdriver.chrome.driver","C:\\browser_driver\\chromedriver.exe");
 			
-			String email = "rahat.tajwar12@gmail.com";
+			String email = "saifalnoor7012@gmail.com";
 			
 			ChromeDriver driver = new ChromeDriver();
 			driver.get("http://automationpractice.com/index.php ");
 			
 			driver.manage().deleteAllCookies(); 
 			
-			WebElement signin = driver.findElementByXPath("//a[@class='login']");
+			WebElement signIn = driver.findElementByXPath("//a[@class='login']");
 			signin.click();
 			
-		    WebElement sign_in_email =driver.findElementByXPath("//input[@name='email_create']");
-		    sign_in_email.sendKeys(email);
+		    WebElement signInEmail =driver.findElementByXPath("//input[@name='email_create']");
+		    signInEmail.sendKeys(email);
 			//give_email
 	       
 			driver.findElementByXPath("//button[@id=\'SubmitCreate\']").click();
@@ -41,26 +41,26 @@
 	        
 	      radio1.click();
 	      
-	      WebElement firstname =driver.findElement(By.id("customer_firstname"));
-	      firstname.sendKeys("SAIF");
+	      WebElement firstName =driver.findElement(By.id("customer_firstname"));
+	      firstName.sendKeys("SAIF");
 	      
-	      WebElement lastname =driver.findElement(By.id("customer_lastname"));
-	      lastname.sendKeys("NOOR");
+	      WebElement lastName =driver.findElement(By.id("customer_lastname"));
+	      lastName.sendKeys("NOOR");
 	      
 	      WebElement password =driver.findElementByXPath("//input[@type='password']");
 	      password.sendKeys("12345");
 	      
-	      Select days_dropdown =new Select(driver.findElementByXPath("//select[@id='days']"));
-	      days_dropdown.selectByValue("10");
+	      Select daysDropDown =new Select(driver.findElementByXPath("//select[@id='days']"));
+	      daysDropDown.selectByValue("10");
 	      
-	      Select months_dropdown =new Select(driver.findElementByXPath("//select[@id='months']"));
-	      months_dropdown.selectByValue("8");
+	      Select monthsDropDown =new Select(driver.findElementByXPath("//select[@id='months']"));
+	      monthsDropDown.selectByValue("8");
 	      
-	      Select years_dropdown =new Select(driver.findElementByXPath("//select[@id='years']"));
-	      years_dropdown.selectByValue("1985");
+	      Select yearsDropDown =new Select(driver.findElementByXPath("//select[@id='years']"));
+	      yearsDropDown.selectByValue("1985");
 	      
-	      WebElement newsletter_checkbox = driver.findElementByXPath("//input[@name='newsletter']");
-	      newsletter_checkbox.click();
+	      WebElement newsLetterCheckBox = driver.findElementByXPath("//input[@name='newsletter']");
+	      newsLetterCheckBox.click();
 	      
 	      WebElement company = driver.findElementByXPath("//input[@id='company']");
 	      company.sendKeys("Brain Station23");
@@ -78,31 +78,31 @@
 	      city.sendKeys("Dhaka");
 	    
 	      
-	      Select state_dropdown =new Select(driver.findElementByXPath("//select[@id='id_state']"));
-	      state_dropdown.selectByValue("3");
+	      Select stateDropDown =new Select(driver.findElementByXPath("//select[@id='id_state']"));
+	      stateDropDown.selectByValue("3");
 	      
 	   
-	      WebElement postcode = driver.findElementByXPath("//input[@id='postcode']");
-	      postcode.sendKeys("85027");
+	      WebElement postCode = driver.findElementByXPath("//input[@id='postcode']");
+	      postCode.sendKeys("85027");
 	    
 	      
-	      WebElement additional_info = driver.findElementByXPath("//textarea[@name='other']");
-	      additional_info.sendKeys("Brain Station23 is a Software Development Company");
+	      WebElement additionalInfo = driver.findElementByXPath("//textarea[@name='other']");
+	      additionalInfo.sendKeys("Brain Station23 is a Software Development Company");
 	      
-	      WebElement home_phone =driver.findElementByXPath("//input[@id='phone']");
-	      home_phone.sendKeys("01913594372");
+	      WebElement homePhone =driver.findElementByXPath("//input[@id='phone']");
+	      homePhone.sendKeys("01913594372");
 	      
 	    
 	      
-	      WebElement mobile_phone =driver.findElementByXPath("//input[@id='phone_mobile']");
-	      mobile_phone.sendKeys("01571306571");
+	      WebElement mobilePhone =driver.findElementByXPath("//input[@id='phone_mobile']");
+	      mobilePhone.sendKeys("01571306571");
 	   
-	      WebElement alias_address =driver.findElementByXPath(" //input[@id='alias']");
-	      alias_address.clear(); 
-	      alias_address.sendKeys("Mohakhali");
+	      WebElement aliasAddress =driver.findElementByXPath(" //input[@id='alias']");
+	      aliasAddress.clear(); 
+	      aliasAddress.sendKeys("Mohakhali");
 	    
-	      WebElement submit_account =driver.findElementByXPath("//button[@id='submitAccount']");
-	      submit_account.click();
+	      WebElement submitAccount =driver.findElementByXPath("//button[@id='submitAccount']");
+	      submitAccount.click();
 	      
 	      try {
 				Thread.sleep(10000);
@@ -111,21 +111,21 @@
 				e.printStackTrace();
 			}
 	      
-	      WebElement logout= driver.findElementByXPath("//a[@title='Log me out']");
-	      logout.click();
+	      WebElement logOut= driver.findElementByXPath("//a[@title='Log me out']");
+	      logOut.click();
 	      
-	      WebElement log_in_email =driver.findElementByXPath("//input[@id='email']");
-	      log_in_email.sendKeys(email);
+	      WebElement logInEmail =driver.findElementByXPath("//input[@id='email']");
+	      logInEmail.sendKeys(email);
 	      
-	      WebElement log_in_password =driver.findElementByXPath("//input[@id='passwd']");
-	      log_in_password.sendKeys("12345");
+	      WebElement logInPassword =driver.findElementByXPath("//input[@id='passwd']");
+	      logInPassword.sendKeys("12345");
 	      
-	      WebElement sign_in_button =driver.findElementByXPath("//button[@id='SubmitLogin']");
-	      sign_in_button.click();
+	      WebElement signInButton =driver.findElementByXPath("//button[@id='SubmitLogin']");
+	      signInButton.click();
 	      
-	      String customer_account_name = driver.findElementByXPath("//a[@title='View my customer account']").getText();
+	      String customerAccountName = driver.findElementByXPath("//a[@title='View my customer account']").getText();
 	      
-	      if(customer_account_name.equals("SAIF NOOR")) {
+	      if(customerAccountName.equals("SAIF NOOR")) {
 	   	  System.out.println("The Account Has been Created Successfully");
 	      }
 	     
