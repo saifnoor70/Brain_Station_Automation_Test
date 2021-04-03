@@ -16,7 +16,8 @@
 			// TODO Auto-generated method stub
 			System.setProperty("webdriver.chrome.driver","C:\\browser_driver\\chromedriver.exe");
 			
-			String email = "saifalnoor7012@gmail.com";
+			String email = "saifalnoor70@gmail.com";
+			String pass =  "12345abc";
 			
 			ChromeDriver driver = new ChromeDriver();
 			driver.get("http://automationpractice.com/index.php ");
@@ -24,7 +25,7 @@
 			driver.manage().deleteAllCookies(); 
 			
 			WebElement signIn = driver.findElementByXPath("//a[@class='login']");
-			signin.click();
+			signIn.click();
 			
 		    WebElement signInEmail =driver.findElementByXPath("//input[@name='email_create']");
 		    signInEmail.sendKeys(email);
@@ -48,7 +49,7 @@
 	      lastName.sendKeys("NOOR");
 	      
 	      WebElement password =driver.findElementByXPath("//input[@type='password']");
-	      password.sendKeys("12345");
+	      password.sendKeys(pass);
 	      
 	      Select daysDropDown =new Select(driver.findElementByXPath("//select[@id='days']"));
 	      daysDropDown.selectByValue("10");
@@ -118,7 +119,7 @@
 	      logInEmail.sendKeys(email);
 	      
 	      WebElement logInPassword =driver.findElementByXPath("//input[@id='passwd']");
-	      logInPassword.sendKeys("12345");
+	      logInPassword.sendKeys(pass);
 	      
 	      WebElement signInButton =driver.findElementByXPath("//button[@id='SubmitLogin']");
 	      signInButton.click();
